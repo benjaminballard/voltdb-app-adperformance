@@ -8,6 +8,11 @@ The "TrackEvent" stored procedure processes these events.  It looks up the corre
 
 Several views maintain real-time aggregations on this table to provide a minutely summary for each advertiser, plus drill-down reports grouped by campaign and creative to show detail-level metrics, costs and rates with real-time accuracy.
 
+Several new SQL features in VoltDB are demonstrated in this application, including:
+  - VIEW group by expressions
+  - [TRUNCATE](http://voltdb.com/docs/UsingVoltDB/sqlfunctruncate.php) Timestamp function
+  - [DECODE](http://voltdb.com/docs/UsingVoltDB/sqlfuncdecode.php) function
+
 Code organization
 -----------------
 The code is divided into two projects:
@@ -21,8 +26,9 @@ please contact fieldengineering@voltdb.com.
 
 Pre-requisites
 --------------
-Before running these scripts you need to have VoltDB installed, and you should add the voltdb-$(VERSION)/bin directory to your PATH environment variable, for example:
+Before running these scripts you need to have VoltDB 3.7 (Enterprise or Community) or later installed, and you should add the voltdb-$(VERSION)/bin directory to your PATH environment variable, for example:
 
+    VERSION="ent-3.7"
     export PATH="$PATH:$HOME/voltdb-$(VERSION)/bin"
 
 
